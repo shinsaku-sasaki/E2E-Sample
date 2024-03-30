@@ -1,8 +1,11 @@
 name: Playwright Tests
 # 12時間おきに実行
 on:
-  schedule:
-    - cron: '0 */12 * * *'
+  # schedule:
+  #   - cron: '0 */12 * * *'
+  push:
+    branches:
+      - main
 jobs:
   test:
     timeout-minutes: 60
